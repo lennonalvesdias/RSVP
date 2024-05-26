@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Presença - Aniversário do Lennon</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("SEU_USER_ID");
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="header.png" alt="Header" class="header-image">
+        <h1>Confirmação de Presença</h1>
+        <p>Você está convidado para a festa de 30 anos do Lennon!</p>
+        <form id="rsvp-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> -->
+
+            <label for="attendance">Vai comparecer?</label>
+            <select id="attendance" name="attendance" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="yes">Sim</option>
+                <option value="no">Não</option>
+            </select>
+
+            <div id="guests-container" style="display: none;">
+                <label for="guests">Quantidade de acompanhantes:</label>
+                <select id="guests" name="guests">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <div id="guest-names-container"></div>
+            </div>
+
+            <!-- <label for="whatsapp-flag">Enviar confirmação por WhatsApp?</label>
+            <input type="checkbox" id="whatsapp-flag" name="whatsapp-flag"> -->
+
+            <button type="submit">Confirmar Presença</button>
+        </form>
+        <div id="response-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

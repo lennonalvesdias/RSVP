@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px; /* Aumentei a largura */
+    width: 100%;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+}
+
+p {
+    color: #666;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 700;
+    color: #333;
+    text-align: left; /* Alinha os labels à esquerda */
+    margin-top: 10px; /* Espaçamento entre o label e o campo de entrada */
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding e o border sejam incluídos na largura total */
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background-color: #ffa000; /* Cor primária */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #cc8000; /* Cor mais escura para hover */
+}
+
+#response-message {
+    margin-top: 20px;
+    color: #28a745;
+    font-weight: bold;
+}
