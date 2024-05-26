@@ -32,7 +32,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
     event.preventDefault();
 
     const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+    // const email = document.getElementById('email').value;
     const attendance = document.getElementById('attendance').value;
     const guests = attendance === 'yes' ? document.getElementById('guests').value : 0;
     // const whatsappFlag = document.getElementById('whatsapp-flag').checked;
@@ -54,7 +54,6 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
         to_name: 'Lennon',
         from_name: name,
         name: name,
-        email: email,
         attendance: attendance === 'yes' ? 'Sim' : 'Não',
         guests: guests,
         guest_names: guestNames
