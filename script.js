@@ -46,8 +46,12 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
         }
     }
 
+    // Atualiza a mensagem de confirmação
     const message = `Obrigado, ${name}! Sua resposta foi registrada.`
     document.getElementById('response-message').textContent = message;
+
+    // Oculta o formulário
+    document.getElementById('rsvp-form').style.display = 'none';
 
     // Enviar e-mail usando EmailJS
     const templateParams = {
@@ -69,7 +73,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
     // Enviar mensagem pelo WhatsApp se a flag estiver marcada
     if (whatsappFlag) {
         const whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0APresença: ${attendance === 'yes' ? 'Sim' : 'Não'}%0AAcompanhantes: ${guests}${guestNames ? `%0A${guestNames.replace(/<br>/g, '%0A')}` : ''}`;
-        const whatsappUrl = `https://wa.me/5514997210201?text=${whatsappMessage}`;
+        const whatsappUrl = `https://wa.me/SEU_NUMERO_DE_TELEFONE?text=${whatsappMessage}`;
         window.open(whatsappUrl, '_blank');
     }
 
